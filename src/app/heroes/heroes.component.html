@@ -2,7 +2,7 @@
 <div><span>id: </span>{{hero.id}}</div>
 <div><span>name: </span>{{hero.name}}</div> -->
 
-<h2>
+<!-- <h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes">
             <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
@@ -11,6 +11,17 @@
             </button>
         </li>
     </ul>
+</h2> -->
+
+
+<h2>
+    <ul class="heroes">
+        <li *ngFor="let hero of heroes">
+            <a routerLink="/detail/{{hero.id}}">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+            </a>
+        </li>
+    </ul>
 </h2>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
